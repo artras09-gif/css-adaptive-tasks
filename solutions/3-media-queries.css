@@ -82,7 +82,8 @@
   
   .catalog {
     /* BEGIN (write your solution here) */
-
+    display: flex;
+    flex-wrap: wrap;
     /* END */
     width: 100%;
     max-width: 1280px;
@@ -95,7 +96,8 @@
   
   .catalog-item {
     /* BEGIN (write your solution here) */
-
+    flex-grow: 1;
+    flex-basis: 100%;
     /* END */
     margin: 5px;
     padding: 10px 25px;
@@ -119,6 +121,17 @@
   }
   
   /* BEGIN (write your solution here) */
-  
+  @media (min-width: 1200px) {
+  .catalog-item {
+  flex-basis: 32%;
+  max-width: 400px;
+  }
+  }
+  @media (min-width: 600px) and (max-width: 1199.98px) {
+  .catalog-item {
+  flex-basis: 50%;
+  margin: 0;
+  }
+  }
   /* END */
   
